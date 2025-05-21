@@ -56,6 +56,7 @@ function initGame() {
   // обновление статов игры
   gameTime = 0;
   power = 50;
+  player.classList.remove("crash-animation");
   updateStats();
 
   // запуск game loop
@@ -124,7 +125,7 @@ function generateWall() {
   gameContainer.appendChild(wall);
   walls.push(wall);
 
-  if (Math.random() < 0.7) {
+  if (Math.random() < 0.3) {
     generateBattery(wallHeight, isTopWall);
   }
 }
