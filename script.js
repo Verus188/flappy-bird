@@ -1,4 +1,3 @@
-// Game elements
 const screens = {
   welcome: document.querySelector(".welcome-screen"),
   game: document.querySelector(".game-screen"),
@@ -20,7 +19,6 @@ const restartBtns = [
   document.getElementById("game-over-restart-btn"),
 ];
 
-// Game variables
 let playerName = "";
 let gameTime = 0;
 let power = 50;
@@ -63,8 +61,8 @@ function initGame() {
   if (gameInterval) clearInterval(gameInterval);
   if (powerInterval) clearInterval(powerInterval);
 
-  gameInterval = setInterval(updateGame, 1000 / 60); // 60 FPS
-  powerInterval = setInterval(updatePower, 1000); // Every second
+  gameInterval = setInterval(updateGame, 1000 / 60);
+  powerInterval = setInterval(updatePower, 1000);
 }
 
 // обновление игры
@@ -112,7 +110,7 @@ function updateGame() {
 
 // функция генерации стен
 function generateWall() {
-  const wallHeight = Math.floor(Math.random() * 301) + 100; // 100-500px
+  const wallHeight = Math.floor(Math.random() * 301) + 100;
   const isTopWall = Math.random() > 0.5;
 
   const wall = document.createElement("div");
@@ -142,7 +140,7 @@ function generateBattery(wallHeight, isTopWall) {
 
   const battery = document.createElement("div");
   battery.className = "battery";
-  battery.style.left = `${gameWidth + 150}px`; // Place in the middle of the gap
+  battery.style.left = `${gameWidth + 150}px`;
   battery.style.top = `${batteryY}px`;
 
   gameContainer.appendChild(battery);

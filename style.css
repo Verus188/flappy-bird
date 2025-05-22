@@ -29,7 +29,6 @@ body {
   pointer-events: all;
 }
 
-/* Welcome Screen */
 .welcome-screen {
   background-color: #2c3e50;
 }
@@ -74,7 +73,6 @@ body {
   cursor: not-allowed;
 }
 
-/* Game Screen */
 .game-screen {
   background-color: #34495e;
 }
@@ -169,7 +167,6 @@ body {
   }
 }
 
-/* Result Screen */
 .result-screen {
   background-color: #27ae60;
 }
@@ -199,7 +196,6 @@ body {
   background-color: #34495e;
 }
 
-/* Game Over Screen */
 .game-over-screen {
   background-color: #e74c3c;
 }
